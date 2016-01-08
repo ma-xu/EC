@@ -1,11 +1,12 @@
-package com.maxu.manager;
+package com.maxu.service.impl;
 
 import java.util.List;
 
 import com.maxu.dao.UserDao;
 import com.maxu.entity.User;
+import com.maxu.service.UserService;
 
-public class UserManagerImpl implements UserManager {
+public class UserServiceImpl implements UserService {
 
 	private UserDao userDao;
 	

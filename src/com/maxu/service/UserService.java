@@ -1,10 +1,10 @@
-package com.maxu.manager;
+package com.maxu.service;
 
 import java.util.List;
 
 import com.maxu.entity.User;
 
-public interface UserManager {
+public interface UserService {
 
 	public User getUser(String id);
 	

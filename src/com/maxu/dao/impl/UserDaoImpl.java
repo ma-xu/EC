@@ -1,10 +1,11 @@
-package com.maxu.dao;
+package com.maxu.dao.impl;
 
 import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 
+import com.maxu.dao.UserDao;
 import com.maxu.entity.User;
 
 public class UserDaoImpl implements UserDao {

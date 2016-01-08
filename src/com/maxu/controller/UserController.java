@@ -1,4 +1,4 @@
-package com.maxu.web;
+package com.maxu.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,19 +11,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.maxu.entity.User;
-import com.maxu.manager.UserManager;
+import com.maxu.service.UserService;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
-	@Resource(name="userManager")
-	private UserManager userManager;
+	@Resource(name="userService")
+	private UserService userService;
 
 	@RequestMapping("/getAllUser")
 	public String getAllUser(HttpServletRequest request){
 		
-		request.setAttribute("userList", userManager.getAllUser());
+		request.setAttribute("userList", userService.getAllUser());
 		
 		return "/index";
 	}
@@ -31,7 +31,7 @@ public class UserController {
 	@RequestMapping("/getUser")
 	public String getUser(String id,HttpServletRequest request){
 		
-		request.setAttribute("user", userManager.getUser(id));
+		request.setAttribute("user", userService.getUser(id));
 	
 		return "/editUser";
 	}
@@ -44,7 +44,7 @@ public class UserController {
 	@RequestMapping("/addUser")
 	public String addUser(User user,HttpServletRequest request){
 		
-		userManager.addUser(user);
+	    userService.addUser(user);
 		
 		return "redirect:/user/getAllUser";
 	}
@@ -54,7 +54,7 @@ public class UserController {
 		
 		String result = "{\"result\":\"error\"}";
 		
-		if(userManager.delUser(id)){
+		if(userService.delUser(id)){
 			result = "{\"result\":\"success\"}";
 		}
 		
@@ -71,8 +71,8 @@ public class UserController {
 	@RequestMapping("/updateUser")
 	public String updateUser(User user,HttpServletRequest request){
 		
-		if(userManager.updateUser(user)){
-			user = userManager.getUser(user.getId());
+		if(userService.updateUser(user)){
+			user = userService.getUser(user.getId());
 			request.setAttribute("user", user);
 			return "redirect:/user/getAllUser";
 		}else{

@@ -6,16 +6,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean id="userDao" class="com.maxu.dao.UserDaoImpl">
+	<bean id="userDao" class="com.maxu.dao.impl.UserDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<bean id="userManagerBase" class="com.maxu.manager.UserManagerImpl">
+	<bean id="userServiceBase" class="com.maxu.service.impl.UserServiceImpl">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	
 	<!-- 此处为代理 -->
-	<bean name="userManager" parent="transactionProxy">
-		<property name="target" ref="userManagerBase"></property>
+	<bean name="userService" parent="transactionProxy">
+		<property name="target" ref="userServiceBase"></property>
 	</bean>	
 </beans>
