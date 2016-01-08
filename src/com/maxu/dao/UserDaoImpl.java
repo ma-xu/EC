@@ -1,11 +1,11 @@
-package com.tgb.dao;
+package com.maxu.dao;
 
 import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 
-import com.tgb.entity.User;
+import com.maxu.entity.User;
 
 public class UserDaoImpl implements UserDao {
 

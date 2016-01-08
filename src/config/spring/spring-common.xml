@@ -27,7 +27,7 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.tgb.entity.User</value>
+				<value>com.maxu.entity.User</value>
 			</list>
 		</property>
 	</bean>

@@ -1,10 +1,10 @@
-package com.tgb.manager;
+package com.maxu.dao;
 
 import java.util.List;
 
-import com.tgb.entity.User;
+import com.maxu.entity.User;
 
-public interface UserManager {
+public interface UserDao {
 
 	public User getUser(String id);
 	

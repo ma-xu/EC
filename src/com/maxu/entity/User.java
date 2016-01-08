@@ -1,4 +1,4 @@
-package com.tgb.entity;
+package com.maxu.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

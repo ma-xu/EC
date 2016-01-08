@@ -6,11 +6,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean id="userDao" class="com.tgb.dao.UserDaoImpl">
+	<bean id="userDao" class="com.maxu.dao.UserDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<bean id="userManagerBase" class="com.tgb.manager.UserManagerImpl">
+	<bean id="userManagerBase" class="com.maxu.manager.UserManagerImpl">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	

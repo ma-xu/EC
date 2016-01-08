@@ -1,4 +1,4 @@
-package com.tgb.web;
+package com.maxu.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tgb.entity.User;
-import com.tgb.manager.UserManager;
+import com.maxu.entity.User;
+import com.maxu.manager.UserManager;
 
 @Controller
 @RequestMapping("/user")

@@ -1,9 +1,9 @@
-package com.tgb.manager;
+package com.maxu.manager;
 
 import java.util.List;
 
-import com.tgb.dao.UserDao;
-import com.tgb.entity.User;
+import com.maxu.dao.UserDao;
+import com.maxu.entity.User;
 
 public class UserManagerImpl implements UserManager {
 
